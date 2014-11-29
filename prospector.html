@@ -1,0 +1,21 @@
+<head>
+  <title>prospector</title>
+</head>
+
+<body>
+  <h1>This is Prospector</h1>
+
+  {{> clients}}
+</body>
+
+<template name="clients">
+  {{#each clients}}
+	<h1>{{name}}</h1>
+	<a href="{{url}}">{{url}}</a>
+	<h4>{{location}}</h4>
+	{{#each projects}}
+		<li>{{name}}</li>
+	{{/each}}
+  {{/each}}
+
+</template>
